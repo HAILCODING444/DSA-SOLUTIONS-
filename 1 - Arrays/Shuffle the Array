@@ -1,0 +1,15 @@
+// video -- https://youtu.be/ZJy1l7S9Xa8
+// leetcode 1470
+
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int [] ans = new int [2*n] ;
+        int k =0 ;
+        for(int i=0 ; i< n ; i++){
+            ans[2*i] = nums[i] ;
+            ans[k+1] = nums[i+n] ;
+            k+=2 ;
+        }
+        return ans ;
+    }
+}
